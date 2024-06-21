@@ -1,0 +1,150 @@
+body, html {
+    background-image: url("../img/webbg.png");
+    background-attachment: fixed;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo
+{
+    float: left;
+}
+/* ~~ Top Navigation Bar ~~ */
+
+#navigation-container
+{
+    width: 600px;
+    margin: 0 auto;
+    height: 64px;
+}
+
+.navigation-bar
+{
+    background-color: #352d2f;
+    height: 64px;
+    width: 100%;
+    text-align:center;
+    position: fixed;
+}
+
+.navigation-bar img
+{
+    float:left;
+}
+
+.navigation-bar ul
+{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.navigation-bar li
+{
+    list-style-type: none;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+}
+
+.navigation-bar li a
+{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 64px;
+    padding: 5px 15px;
+    text-align: center;
+    border: 1px solid rgba(1,1,1,0);
+    border-radius: 6px;
+}
+
+.navigation-bar li a:hover
+{
+    border-color: rgba(1,1,1,1);
+}
+
+#menu
+{
+    float: right;
+}
+
+/**
+ * Contents class
+ */
+
+.contents
+{
+    padding-top: 64px;
+    padding-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    
+    block-size: fit-content;
+}
+
+.contents p
+{
+    display: inline-block;
+    word-break: break-word;
+    word-wrap: break-word;
+
+	border: 3px solid white;
+	border-radius: 1rem;
+	box-shadow: 3px 3px 3px 3px whitesmoke;
+    padding: 5px;
+}
+
+.contents img
+{
+    object-fit: cover;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.contents table
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: smaller;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.contents table tr td
+{
+    border: 1px solid black;
+}
+
+.contents ul
+{
+    list-style-type: circle;
+}
+
+/**
+ * Footer class
+ */
+
+.footer
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: yellow;
+    font-size: small;
+    line-height: 10px;
+    background-color: black;
+}
