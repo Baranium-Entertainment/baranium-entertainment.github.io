@@ -11,7 +11,10 @@ body, html {
 {
     float: left;
 }
-/* ~~ Top Navigation Bar ~~ */
+
+/**
+ * Navigation bar
+ */
 
 #navigation-container
 {
@@ -70,13 +73,8 @@ body, html {
     border-color: rgba(1,1,1,1);
 }
 
-#menu
-{
-    float: right;
-}
-
 /**
- * Contents class
+ * Contents
  */
 
 .contents
@@ -131,7 +129,7 @@ body, html {
 }
 
 /**
- * Footer class
+ * Footer
  */
 
 .footer
