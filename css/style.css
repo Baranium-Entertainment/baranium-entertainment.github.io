@@ -18,7 +18,7 @@ body, html {
 
 #navigation-container
 {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     height: 64px;
 }
@@ -126,6 +126,16 @@ body, html {
 .contents ul
 {
     list-style-type: circle;
+}
+
+.contents a
+{
+    color: white;
+}
+
+.contents a:hover
+{
+    color: gray;
 }
 
 /**
