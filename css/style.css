@@ -1,15 +1,37 @@
+@font-face
+{
+    font-family: msdosfont;
+    src: url('../fonts/MorePerfectDOSVGA.ttf') format("truetype");
+}
+
 body, html {
+    font-family: msdosfont, monospace, sans-serif;
     background-image: url("../img/webbg.png");
     background-attachment: fixed;
-    font-family: sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+button
+{
+    all: unset;
+}
+
 .logo
 {
     float: left;
+}
+
+#downloadButton
+{
+    color: #00aa00;
+    text-shadow: 0px 0px 10px #00aa00, 0px 0px 10px #007700, 0px 0px 10px #00aa00, 0px 0px 10px #007700;
+}
+#downloadButton:hover
+{
+    color: #00cc00;
+    text-shadow: 0px 0px 10px #00cc00, 0px 0px 10px #009900, 0px 0px 10px #00cc00, 0px 0px 10px #009900;
 }
 
 /**
@@ -30,6 +52,7 @@ body, html {
     width: 100%;
     text-align:center;
     position: fixed;
+    top:0;
 }
 
 .navigation-bar img
@@ -70,6 +93,23 @@ body, html {
 
 .navigation-bar li a:hover
 {
+    border-color: rgba(1,1,1,1);
+}
+
+.navigation-bar li button
+{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 15px;
+    text-align: center;
+    border: 1px solid rgba(1,1,1,0);
+    border-radius: 6px;
+}
+
+.navigation-bar li button:hover
+{
+    cursor: pointer;
     border-color: rgba(1,1,1,1);
 }
 
@@ -139,6 +179,72 @@ body, html {
 }
 
 /**
+ * CRT Effect
+*/
+
+.contents::before
+{
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% {
+    opacity: 0.27861;
+    }
+    5% {
+    opacity: 0.34769;
+    }
+    10% {
+    opacity: 0.23604;
+    }
+    15% {
+    opacity: 0.10626;
+    }
+    20% {
+    opacity: 0.18128;
+    }
+    25% {
+    opacity: 0.10626;
+    }
+    30% {
+    opacity: 0.18128;
+    }
+    35% {
+    opacity: 0.23604;
+    }
+}
+
+.contents::after
+{
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.5s infinite;
+}
+ 
+/**
+* huge thanks to the author of https://oudkee.neocities.org/tutorials/tutcrt
+*/
+
+/**
  * Footer
  */
 
@@ -151,8 +257,9 @@ body, html {
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: yellow;
+    color: #ffff00;
     font-size: small;
+    text-shadow: 0px 0px 10px #ffff00, 0px 0px 10px #cccc00, 0px 0px 10px #ffff00, 0px 0px 10px #cccc00;
     line-height: 10px;
     background-color: black;
 }
